@@ -1,0 +1,13 @@
+default: &default
+  access_id: my_access_id
+  secret_key: CHANGEME
+
+test:
+  access_id: my_access_id
+  secret_key: somenonsensicalgarbage
+
+development:
+  <<: *default
+
+production:
+  <<: *default
