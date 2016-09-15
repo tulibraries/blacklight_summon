@@ -1,5 +1,4 @@
-module Blacklight::Summon
-  class SummonDocument
+class SummonDocument
 
     require_dependency 'blacklight/summon'
 
@@ -7,5 +6,4 @@ module Blacklight::Summon
 
 
     self.unique_key = '@id'
-  end
 end

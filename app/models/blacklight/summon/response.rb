@@ -10,7 +10,7 @@ module Blacklight::Summon
     def initialize(docs, request_params, options = {})
       @docs = docs
       @request_params = request_params.with_indifferent_access
-      self.document_model =  Blacklight::Summon::SummonDocument
+      self.document_model =  ::SummonDocument
       self.blacklight_config = options[:blacklight_config]
 
       facet_counts = options.fetch(:facet_counts, {})

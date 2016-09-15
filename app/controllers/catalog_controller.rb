@@ -11,7 +11,7 @@ class CatalogController < ApplicationController
     config.search_builder_class = Blacklight::Summon::SearchBuilder
 
     # Model that describes a Document
-    config.document_model = Blacklight::Summon::SummonDocument
+    config.document_model = ::SummonDocument
 
     # Model that maps search index responses to the blacklight response model
     config.response_model = Blacklight::Summon::Response
