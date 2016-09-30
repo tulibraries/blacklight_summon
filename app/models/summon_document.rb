@@ -5,5 +5,8 @@ class SummonDocument
     include Blacklight::Summon::Document
 
 
-    self.unique_key = '@id'
+    self.unique_key = 'id'
+
+
+
 end

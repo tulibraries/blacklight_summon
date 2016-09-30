@@ -1,4 +1,4 @@
-
+require 'summon/document'
 
 module Blacklight::Summon
   class Repository < Blacklight::AbstractRepository
@@ -12,8 +12,10 @@ module Blacklight::Summon
     #
     def search(params = {})
       params = params.to_hash unless params.is_a?(Hash)
-      summon = ::Summon::Service.new Rails.configuration.summon
+      summon = Summon::Service.new Rails.configuration.summon
+
       search = summon.search('s.q' => params.fetch(:q, ''))
+      Rails.logger.info "Summon searched with query #{params.fetch(:q, '')}"
       docs = search.documents
 
       response_opts = {

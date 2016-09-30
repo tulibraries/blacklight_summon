@@ -16,8 +16,17 @@ class CatalogController < ApplicationController
     # Model that maps search index responses to the blacklight response model
     config.response_model = Blacklight::Summon::Response
 
+    config.index.document_presenter_class = SummonIndexPresenter
 
+
+
+    config.add_index_field 'id'
     config.add_index_field 'title', label: 'Title'
-    config.add_show_field 'title', label: 'Title'
+    config.add_index_field 'link'
+    config.add_index_field 'year', label: 'Year'
+    config.add_index_field 'subtitle', label: 'Subtitle'
+    config.add_index_field 'authors'
+
+
   end
 end

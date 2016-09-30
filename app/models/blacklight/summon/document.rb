@@ -3,5 +3,4 @@ module Blacklight::Summon::Document
   include Blacklight::Document
   include Blacklight::Document::ActiveModelShim
 
-
 end

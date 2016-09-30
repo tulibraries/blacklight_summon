@@ -12,5 +12,7 @@ module SummonSolr
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.summon = config_for(:summon).with_indifferent_access
+
+    config.autoload_paths << Rails.root.join('lib')
   end
 end
