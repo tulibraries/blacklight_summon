@@ -17,6 +17,7 @@ Get the rails app set up locally:
 Then copy `config/summon.yml.example` to `config/yml` and update the default 
 `access_id` and `secret_key` with your Summon Api details.
 
+
 Then start the rails server:
 
 `bundle exec rails server`
